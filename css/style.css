@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Caveat:wght@400;500;600;700&family=Croissant+One&family=Flavors&family=Inter:wght@300;400;500;600;700;800;900&family=Kalam:wght@300;400;700&family=Martian+Mono:wght@200;300;400;500;600;700;800&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Pixelify+Sans:wght@400;500;600;700&family=Ramabhadra&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Skranji:wght@400;700&family=Tajawal:wght@200;300;400;700;800;900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+* {
+
+}
+:root {
+    --dark-color: #19283f;
+    --green-color: #33d1cc;
+    --red-color: #ff3150;
+    --yellow-color: #ffc400;
+    --section-color: #eff7fa;
+}
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.main-btn {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+}
+.main-btn:hover {
+    color: var(--yellow-color);
+}
+
+/* ---------------------------------------------------------------- start header */
+.navbar {
+    background-color: var(--dark-color);
+}
+.navbar .navbar-nav  .nav-link {
+    color: #fff;
+    font-weight: 500;
+}
+.navbar .active {
+    color: var(--green-color);
+}
+.navbar .search{
+    border-left: 1px solid var(--green-color); color: #fff;
+}
+.navbar .search svg {
+    color: var(--green-color);
+}
+.navbar .navbar-nav  .nav-link:active,
+.navbar .navbar-nav  .nav-link:focus,
+.navbar .navbar-nav  .nav-link:hover
+{
+    color: var(--green-color);
+}
+.navbar .navbar-brand {
+    color: #fff;
+}
+.navbar .navbar-toggler {
+    color: #fff;
+    font-size: 25px;
+    border-color: white;
+}
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+.navbar .navbar-toggler[aria-expanded="true"] {
+    border-color: var(--green-color);
+}
+/* ---------------------------------------------------------------- end header */
+
+
+
+/* ---------------------------------------------------------------- start home */
+.home {
+    background-color: var(--dark-color);
+    min-height: calc(100vh - 70px);
+}
+/* ---------------------------------------------------------------- end home */
+
+
+/* ---------------------------------------------------------------- start featuers */
+.main-part::after {
+    content: "";
+    width: 120px;
+    height: 2px;
+    background-color: var(--green-color);
+    position: absolute;
+    bottom: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.feat h4 {
+    color: var(--yellow-color);
+}
+.featuers-elements .icon-holder {
+    height: 200px;
+}
+.icon-holder .number {
+    font-size: 12rem;
+    color: var(--section-color);
+}
+.features .icon-holder svg {
+    left: 50%;
+    transform: translateX(-50%);
+}
+.icon-holder .icon {
+    color: var(--green-color);
+}
+/* ---------------------------------------------------------------- end featuers */
+
+
+/* ---------------------------------------------------------------- start our work */
+.our-work {
+    background-color: var(--section-color);
+}
+.our-work ul .active {
+    background-color: var(--red-color);
+    color: var(--yellow-color);
+    border-radius: 20px;
+}
+.our-work ul li {
+    padding: 7px 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.our-work ul li:not(.active):hover {
+    color: var(--red-color);
+}
+.our-work .box {
+    overflow: hidden;
+}
+.our-work .box::before {
+    content: attr(data-work);
+    position: absolute;
+    background-color: rgb(51 209 204 / 75%);
+    height: calc(100% - 8px);
+    width: calc(100% - 8px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    transition: 0.3s;
+    transform: translateX(-100%);
+}
+.our-work .box:hover::before {
+    transform: translateX(0);
+}
+/* ---------------------------------------------------------------- end our work */
+
+
+/* ---------------------------------------------------------------- start stuff */
+.stuff .describtion {
+    max-width: 500px;
+}
+/* ---------------------------------------------------------------- end stuff */
+
+
+/* ---------------------------------------------------------------- start team */
+.our-team {
+    background-color: var(--section-color);
+}
+.our-team .main-part h2{
+    color: var(--yellow-color);
+}
+.our-team .box h3{
+    background-color: var(--green-color);
+}
+/* ---------------------------------------------------------------- end team */
+
+
+
+/* ---------------------------------------------------------------- start projects */
+.projects {
+    background-color: var(--dark-color);
+}
+/* ---------------------------------------------------------------- end projects */
+
+
+/* ---------------------------------------------------------------- start subscribe */
+.subscribe {
+    background-color: var(--yellow-color);
+
+}
+.subscribe input[type=text] {
+    border: none;
+    border-bottom: 1px solid #fff;
+}
+.subscribe input[type="text"]:focus {
+    outline: none;
+}
+.subscribe ::placeholder {
+    color: #eff7fa;
+}
+.subscribe input[type="submit"] {
+    background-color: var(--dark-color);
+    color: var(--yellow-color);
+}
+/* ---------------------------------------------------------------- end subscribe */
+
+
+/* ---------------------------------------------------------------- start footer */
+.page-footer {
+    background-color: var(--dark-color);
+}
+.page-footer span {
+    color: var(--yellow-color);
+}
+.page-footer .copyright span {
+    color: var(--green-color);
+}
+.page-footer .facebook {
+    background-color: #1877f2;
+}
+.page-footer .twitter {
+    background-color: #00aeef;
+}
+.page-footer .linkedin {
+    background-color: #0a66c2;
+}
+.page-footer .youtube {
+    background-color: #ff0000;
+}
+/* ---------------------------------------------------------------- end footer */
